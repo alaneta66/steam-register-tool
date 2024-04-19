@@ -7,7 +7,6 @@ const url = 'https://store.steampowered.com/join';
 function main() {
   puppeteer.launch({
     headless: true,
-    args: ['--proxy-server=http://127.0.0.1:10809']
   }).then(async browser => {
     const clientKey = process.env.NEXTCAPTCHA_KEY || '';
     const client = new NextCaptcha(clientKey);
